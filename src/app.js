@@ -7,6 +7,7 @@ const forecast = require('./utils/forecast.js')
 
 
 const app = express()
+const port = process.env.PORT || 3000
 
 //-----SETUP PATHS FOR EXPRESS CONFIG---------------
 //this public directory will be served by express. In order to get this, it's necessary to set the public directory path with path library
@@ -134,6 +135,6 @@ app.get('*', (req, res) => {
 })
 
 //this start up the server
-app.listen(3000, () => {
-    console.log('Server is up on port 3000.')
+app.listen(port, () => {
+    console.log('Server is up on port' + port)
 })
